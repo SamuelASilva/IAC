@@ -4,7 +4,7 @@ resource "aws_dynamodb_table" "main_table" {
   hash_key     = "userId"
 
   attribute {
-    name = "userId"
+    name = "userid"
     type = "S"
   }
 
