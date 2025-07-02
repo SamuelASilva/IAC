@@ -1,6 +1,6 @@
 # S3 Bucket
 resource "aws_s3_bucket" "main_bucket" {
-  bucket = "terraform-state-aws-academy-20251-iuri-samuel-fiuza"
+  bucket = "${var.project_name}-${var.student_id}-bucket"
 }
 
 variable "student_id" {
