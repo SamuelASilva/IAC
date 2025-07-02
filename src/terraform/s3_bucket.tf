@@ -1,8 +1,8 @@
 # S3 Bucket
 resource "aws_s3_bucket" "main_bucket" {
-  bucket = "${var.project_name}-${var.student_id}-bucket"
+  bucket = "terraform-state-aws-academy-20251-iuri-samuel-fiuza"
 }
 
 variable "student_id" {
-  default = "lucas-bruzzone"
+  default = "samuel"
 }
