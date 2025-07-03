@@ -42,15 +42,16 @@ resource "aws_apigatewayv2_route" "lambda_route_demo_aula" {
   route_key = "POST /demo/aula"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
-resource "aws_apigatewayv2_route" "lambda_route_iuri" {
+
+resource "aws_apigatewayv2_route" "lambda_route_usuario" {
   api_id    = aws_apigatewayv2_api.main_api.id
-  route_key = "GET /iuri/users"
+  route_key = "GET /usuario/users"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 
-resource "aws_apigatewayv2_route" "lambda_route_iuri_samuel" {
+resource "aws_apigatewayv2_route" "lambda_route_usuario" {
   api_id    = aws_apigatewayv2_api.main_api.id
-  route_key = "POST /iuri/samuel/users"
+  route_key = "POST /usuario/users"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 resource "aws_lambda_permission" "api_gateway" {
