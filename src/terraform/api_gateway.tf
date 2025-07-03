@@ -48,9 +48,9 @@ resource "aws_apigatewayv2_route" "lambda_route_iuri" {
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 
-resource "aws_apigatewayv2_route" "lambda_route_samuel" {
+resource "aws_apigatewayv2_route" "lambda_route_iuri_samuel" {
   api_id    = aws_apigatewayv2_api.main_api.id
-  route_key = "POST /samuel/users"
+  route_key = "POST /iuri/samuel/users"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 resource "aws_lambda_permission" "api_gateway" {
