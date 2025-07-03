@@ -72,7 +72,7 @@ def get_user(user_id):
     if not user_id:
         return response(400, {"error": "userId é obrigatório"})
 
-    result = table.get_item(Key={"userId": user_id})
+    result = table.get_item(Key={"userid": user_id})
 
     if "Item" not in result:
         return response(404, {"error": "Usuário não encontrado"})
