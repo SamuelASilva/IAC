@@ -17,8 +17,8 @@ s3 = boto3.client("s3")
 def lambda_handler(event, context):
     """Função principal - roteia requisições HTTP"""
 
-    method = event.get("requestContext", {}).get("http", {}).get("method", "")
-    path = event.get("rawPath", "")
+    method = event.get("httpMethod", "")
+    path = event.get("path", "")
 
     try:
         if method == "POST" and "/usuario/cad/users" in path:
