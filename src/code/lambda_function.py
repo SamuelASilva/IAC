@@ -57,7 +57,7 @@ def create_user(event):
 
     user_id = str(uuid.uuid4())
     item = {
-        "userId": user_id,
+        "userid": user_id,
         "nome": body["nome"],
         "email": body.get("email", ""),
         "created_at": datetime.now().isoformat(),
