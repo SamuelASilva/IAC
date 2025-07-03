@@ -24,7 +24,7 @@ def lambda_handler(event, context):
         if method == "POST" and "/usuario/cad/users" in path:
             return create_user(event)
         elif method == "GET" and "/usuario/users" in path:
-            user_id = event.get("queryStringParameters", {}).get("userid")
+            user_id = extract_user_id(path)
             return get_user(user_id)
         elif method == "PUT" and "/usuario/cad/users" in path:
             user_id = extract_user_id(path)
