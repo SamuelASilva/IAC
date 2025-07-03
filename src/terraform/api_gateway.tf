@@ -49,9 +49,9 @@ resource "aws_apigatewayv2_route" "lambda_route_usuario" {
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 
-resource "aws_apigatewayv2_route" "lambda_route_usuario" {
+resource "aws_apigatewayv2_route" "lambda_route_usuario_cad" {
   api_id    = aws_apigatewayv2_api.main_api.id
-  route_key = "POST /usuario/users"
+  route_key = "POST /usuario/cad/users"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 resource "aws_lambda_permission" "api_gateway" {
